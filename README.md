@@ -1,4 +1,4 @@
-# iayos.ServiceStack.RollbarFeature
+# iayos.ServiceStack.RollbarPlugin
 
 Plugin to integrate ServiceStack IRequestLogger with Rollbar API for request/error monitoring.
 
@@ -13,7 +13,7 @@ This ServiceStack plugin logs requests to [Rollbar](https://rollbar.com). For mo
 
 In particular, we are able to make use of the free tier to log up to 5,000 requests per month, to trial Rollbar and/or use on ultra-low-volume websites while getting established.
 
-*NB. This version is compatible with ServiceStack v5.1.x.*
+*NB. This version is compatible with ServiceStack v5.1.x. and Rollbar API v1*
 
 # Installing
 
