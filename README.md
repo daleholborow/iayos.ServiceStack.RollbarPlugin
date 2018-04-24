@@ -48,6 +48,7 @@ public override void Configure(Container container)
 		HideRequestBodyForRequestDtoTypes = new List<Type>(),
 		ExcludeRequestDtoTypes = new List<Type>
 		{
+		        // Might have to exclude the Swagger requests to get the two to play nicely
 			typeof(RollbarLogConfigRequest),
 			typeof(SwaggerResource),
 			typeof(SwaggerApiDeclaration)
@@ -58,6 +59,20 @@ public override void Configure(Container container)
     
 }
 ```
+
+and add the skip-logging handler:
+
+```csharp
+private static bool IsRequestSkippedDuringRequestLogging(IRequest request1)
+{
+        // ignore some typical servicestack requests that we aren't interested in
+	if (request1.PathInfo == "/metadata") return true;
+	if (request1.PathInfo == "/favicon.ico") return true;
+	if (request1.PathInfo == "/swagger-ui/") return true;
+	return false;
+}
+```
+
 ### Configuration Options (appsettings.json)
 
 ```json
