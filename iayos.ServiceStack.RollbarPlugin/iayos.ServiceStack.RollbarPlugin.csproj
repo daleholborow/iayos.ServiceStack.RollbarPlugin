@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <Version>0.0.1</Version>
+    <Authors>Dale Holborow @ in a year or so</Authors>
+    <Company>Dale Holborow @ in a year or so &amp; eladaus.com</Company>
+	<Summary>Rollbar request &amp; error logging plugin for ServiceStack framework</Summary>
+    <Description>Plugin to integrate ServiceStack IRequestLogger with Rollbar.com API for request/error monitoring. Contains Request, Response, Session and Error/Exception logging. Heavily inspired by https://github.com/wwwlicious/servicestack-seq-requestlogsfeature and also makes extensive use of https://github.com/rollbar/Rollbar.NET source files.</Description>
+    <PackageProjectUrl>https://github.com/daleholborow/iayos.ServiceStack.RollbarPlugin</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/daleholborow/iayos.ServiceStack.RollbarPlugin</RepositoryUrl>
+    <PackageTags>ServiceStack Rollbar Logging</PackageTags>
+    <PackageLicenseUrl>https://opensource.org/licenses/MIT</PackageLicenseUrl>
+    <PackageReleaseNotes>Contains Request, Response, Session and Error/Exception logging.</PackageReleaseNotes>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ServiceStack" Version="5.1.1" />
+    <PackageReference Include="ServiceStack.Text" Version="5.1.1" />
+  </ItemGroup>
+
+</Project>
